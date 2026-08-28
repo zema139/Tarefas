@@ -100,6 +100,151 @@ int main(){
     }
 }
 5)
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int sortearNumero() {
+    return rand() % 100 + 1;
+}
+int main(){
+    
+    int numero;
+    int palpite;
+    
+    srand(time(NULL));
+    
+    numero = sortearNumero();
+    
+    printf("Digite um numero de 1 a 100:");
+    scanf("%d", &palpite);
+    
+    while (palpite < 1 && palpite > 100){
+        printf("numero invalido!\n");
+        printf("Digite novamente:");
+        scanf("%d", &palpite);
+        
+    }
+    
+    if (palpite == numero) {
+        printf("parabens!!!voce acertou!");
+    
+        
+    }
+    else if (palpite < numero){
+        printf("você chutou muito baixo!\n");
+        printf("O numero correto era %d", numero);
+    }
+    else {
+        printf("você chutou muito alto!\n");
+        printf("O numero correto era %d", numero);
+    }
+    
+    return 0;
+}
+6)
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int sortearNumero() {
+    return rand() % 100 + 1;
+}
+
+int main() {
+
+    int numero;
+    int palpite;
+    int tentativas = 0;
+
+    srand(time(NULL));
+
+    numero = sortearNumero();
+
+    palpite = 0;
+
+    while (palpite != numero) {
+
+        printf("Digite um numero de 1 a 100: ");
+        scanf("%d", &palpite);
+
+        while (palpite < 1 || palpite > 100) {
+            printf("Numero invalido!\n");
+            printf("Digite novamente: ");
+            scanf("%d", &palpite);
+        }
+
+        tentativas++;
+
+        if (palpite < numero) {
+            printf("Voce chutou muito baixo!\n");
+        }
+        else if (palpite > numero) {
+            printf("Voce chutou muito alto!\n");
+        }
+        else {
+            printf("Parabens!!! Voce acertou!\n");
+        }
+    }
+
+    printf("Tentativas: %d\n", tentativas);
+
+    return 0;
+}
+7)
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int sortearNumero() {
+    return rand() % 100 + 1;
+}
+
+int main() {
+
+    int numero;
+    int palpite;
+    int tentativas = 0;
+
+    srand(time(NULL));
+
+    numero = sortearNumero();
+
+    palpite = 0;
+
+    while (palpite != numero && tentativas < 5) {
+
+        printf("Digite um numero de 1 a 100: ");
+        scanf("%d", &palpite);
+
+        while (palpite < 1 || palpite > 100) {
+            printf("Numero invalido!\n");
+            printf("Digite novamente: ");
+            scanf("%d", &palpite);
+        }
+
+        tentativas++;
+
+        if (palpite < numero) {
+            printf("Voce chutou muito baixo!\n");
+        }
+        else if (palpite > numero) {
+            printf("Voce chutou muito alto!\n");
+        }
+    }
+
+    if (palpite == numero) {
+        printf("Parabens!!! Voce acertou!\n");
+        printf("Tentativas: %d\n", tentativas);
+    }
+    else {
+        printf("Voce excedeu o numero maximo de tentativas!\n");
+        printf("O numero sorteado era %d\n", numero);
+    }
+
+    return 0;
+}
+    
     
     
 
@@ -110,4 +255,4 @@ int main(){
 	
 	
 	
-}
+
