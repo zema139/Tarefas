@@ -1,0 +1,113 @@
+1)
+#include <stdio.h>
+
+int main(){
+	
+	int a;
+	int b;
+	int soma, sub, mult, divisao;
+	
+	printf("coloque um valor ao a:");
+	scanf("%d", &a);
+	
+	printf("coloque um valor ao b:");
+	scanf("%d", &b);
+	
+	//soma
+	soma = a + b ;
+	
+	//subtração
+	sub = a - b ;
+	
+	//multriplicação
+	mult = a * b ;
+	
+	//divisão
+	divisao = a / b ;
+	
+	
+	printf("o resultado da soma:%d\n", soma);
+	printf("o resultado da subtração:%d\n", sub);
+	printf("o resultado da multriplicação:%d\n", mult);
+	printf("o resultado da divisão:%d\n", divisao);
+	
+	
+}
+2)
+#include <stdio.h>
+
+int main(){
+	
+	float peso;
+	float altura;
+	float imc;
+	
+	printf("Quantos kilos você pesa atualmente:");
+	scanf("%f", &peso);
+	
+	printf("Qual a sua altura:");
+	scanf("%f", &altura);
+	
+	//formula do imc
+	imc = peso / (altura * altura);
+	
+	printf("O imc de uma pessoa com peso %f kg e altura %f m é igual a %f", peso, altura , imc);
+3)
+#include <stdio.h>
+
+int main(){
+    
+    float nota;
+    float frequencia;
+    
+    printf("quanto voce tirou de nota:");
+    scanf("%f", &nota);
+    
+    printf("qual é a sua frequencia:");
+    scanf("%f", &frequencia);
+    
+    if(nota >= 75 && frequencia >= 75){
+        printf("Aprovado!");
+    }
+    else if ( nota >= 75 && frequencia < 75){
+        printf("Reprovado!");
+    }
+    else{
+        printf("voce esta de exame!");
+  4)
+#include <stdio.h>
+
+int main(){
+    
+    int a;
+    int b;
+    int c;
+    
+    
+    printf("De um valor ao a:");
+    scanf("%d", &a);
+    
+    printf("De um valor ao b:");
+    scanf("%d", &b);
+    
+    printf("De um valor ao c:");
+    scanf("%d", &c);
+    
+    if( a < b + c && b < c + a && c < a + b){
+        printf("é um triangulo");
+    }else{
+        printf("não é um triangulo");
+    }
+}
+5)
+    
+    
+
+	
+	
+	
+	
+	
+	
+	
+}
